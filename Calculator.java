@@ -68,6 +68,8 @@ class calculator extends JFrame implements ActionListener {
 		bd = new JButton("/");
 		bm = new JButton("*");
 		beq = new JButton("C");
+		bpi = new JButton("π");
+       		bez = new JButton("e");
 
 		// create . button
 		be = new JButton(".");
@@ -93,6 +95,8 @@ class calculator extends JFrame implements ActionListener {
 		be.addActionListener(c);
 		beq.addActionListener(c);
 		beq1.addActionListener(c);
+		bpi.addActionListener(c);
+		bez.addActionListener
 
 		// add elements to panel
 		p.add(l);
@@ -113,9 +117,11 @@ class calculator extends JFrame implements ActionListener {
 		p.add(b0);
 		p.add(beq);
 		p.add(beq1);
+		p.add(bpi);
+		p.add(bez);
 
 		// set Background of panel
-		p.setBackground(Color.blue);
+		p.setBackground(Color.DARK_GRAY);
 
 		// add panel to frame
 		f.add(p);
@@ -155,6 +161,13 @@ class calculator extends JFrame implements ActionListener {
 			else if (s1.equals("-"))
 				te = (Double.parseDouble(s0) - Double.parseDouble(s2));
 			else if (s1.equals("/"))
+			
+			else if (s1.equals("π"))
+                		te = (Double.parseDouble(s0) * 3.14159265359);
+
+           		else if (s1.equals("e"))
+				te = (Double.parseDouble(s0) *2.7182818284);
+				
 				te = (Double.parseDouble(s0) / Double.parseDouble(s2));
 			else
 				te = (Double.parseDouble(s0) * Double.parseDouble(s2));
@@ -182,6 +195,13 @@ class calculator extends JFrame implements ActionListener {
 					te = (Double.parseDouble(s0) - Double.parseDouble(s2));
 				else if (s1.equals("/"))
 					te = (Double.parseDouble(s0) / Double.parseDouble(s2));
+				
+				else if (s1.equals("π"))
+                			te = (Double.parseDouble(s0) * 3.14159265359);
+
+            			else if (s1.equals("e"))
+                			te = (Double.parseDouble(s0) *2.7182818284);
+				
 				else
 					te = (Double.parseDouble(s0) * Double.parseDouble(s2));
 
