@@ -39,6 +39,7 @@ class calculator extends JFrame implements ActionListener {
 
 		// create a textfield
 		l = new JTextField(30);
+		l.setPreferredSize(new Dimension(400,50)); 
 
 		// set the textfield to non editable
 		l.setEditable(false);
