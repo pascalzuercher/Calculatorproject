@@ -96,7 +96,7 @@ class calculator extends JFrame implements ActionListener {
 		beq.addActionListener(c);
 		beq1.addActionListener(c);
 		bpi.addActionListener(c);
-		bez.addActionListener
+		bez.addActionListener(c);
 
 		// add elements to panel
 		p.add(l);
